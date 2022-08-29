@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KalkulatorBMIActivity">
+
+    <TextView
+        android:id="@+id/tvJudul"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
+        android:text="Menghitung Nilai Akhir Mahasiswa"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutInputMhs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJudul"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etNamaMhs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Mahasiswa"/>
+
+        <EditText
+            android:id="@+id/etNimMhs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nim"/>
+
+        <EditText
+            android:id="@+id/etNilaiUas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nilai UAS"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etNilaiUts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nilai UTS"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/etNilaiTugas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nilai Tugas"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutButton2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutInputMhs">
+
+        <Button
+            android:id="@+id/btnHitungMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hitung"/>
+
+        <Button
+            android:id="@+id/btnResetMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Reset"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/layoutHasil"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutButton2">
+
+        <TextView
+            android:id="@+id/tvNamaMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvNimMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIM"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvUasMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Uas"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvUtsMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Uts"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvTugasMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Tugas"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvNilaiTotalMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Total"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvRataNilaiMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rata-rata"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvNilaiHurufMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Huruf"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvStatusNilaiMhs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

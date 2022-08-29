@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KalkulatorBMIActivity">
+
+      <TextView
+          android:id="@+id/tvJudul"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16sp"
+          android:text="Kalkulator BMI"
+          android:textSize="20sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+   <LinearLayout
+       android:id="@+id/layoutInput"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="22dp"
+       android:layout_marginStart="16dp"
+       android:layout_marginEnd="16dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/tvJudul"
+       android:orientation="vertical">
+
+      <EditText
+          android:id="@+id/etUmur"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Umur"
+          android:inputType="number"/>
+
+      <EditText
+          android:id="@+id/etTinggiBadan"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Tinggi Badan (cm)"
+          android:inputType="number"/>
+
+      <EditText
+          android:id="@+id/etBeratBadan"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Berat Badan (kg)"
+          android:inputType="number"/>
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/layoutButton"
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:gravity="center"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/layoutInput">
+
+      <Button
+          android:id="@+id/btnHitung"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Hitung"/>
+
+      <Button
+          android:id="@+id/btnReset"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:text="Reset"/>
+
+   </LinearLayout>
+
+   <LinearLayout
+       android:orientation="vertical"
+       android:id="@+id/layoutHasil"
+       android:layout_marginTop="16dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="16dp"
+       android:layout_marginEnd="16dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/layoutButton">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="HASIL: "
+          android:textColor="@color/black"/>
+
+      <TextView
+          android:id="@+id/tvUmur"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:text="Umur "
+          android:textColor="@color/black"/>
+
+      <TextView
+          android:id="@+id/tvTinggi"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Tinggi"
+          android:textColor="@color/black"/>
+
+      <TextView
+          android:id="@+id/tvBeratBadan"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Berat Badan"
+          android:textColor="@color/black"/>
+
+      <TextView
+          android:id="@+id/tvBmi"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="BMI"
+          android:textColor="@color/black"/>
+
+      <TextView
+          android:id="@+id/tvKategoriBmi"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Kategori"
+          android:textColor="@color/black"/>
+
+   </LinearLayout>
+
+   <Button
+       android:id="@+id/btnPindahSiswa"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:text="Menghitung \nNilai Siswa"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/layoutHasil" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
